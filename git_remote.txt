@@ -1,0 +1,83 @@
+ level remote1 
+$ git clone
+_____________________________________
+ level remote2
+$ git checkout main
+$ git commit
+$ git checkout o/main
+$ git commit 
+_____________________________________
+ level remote3 
+$ git fetch
+_____________________________________
+ level remote4
+$ git pull
+_____________________________________
+ level remote5 
+$ git clone
+$ git fakeTeamwork main 2
+$ git commit
+$ git pull
+_____________________________________
+ level remote6
+$ git commit
+$ git commit
+$ git push
+_____________________________________
+ level remote7 
+$ git clone
+$ git fakeTeamwork
+$ git commit
+$ git pull --rebase
+$ git push
+_____________________________________
+ level remote18
+$ git reset --hard o/main
+$ git checkout -b feature C2
+$ git push origin feature
+_____________________________________
+ level remoteAdvanced1
+$ git fetch
+$ git rebase o/main side1
+$ git rebase side1 side2
+$ git rebase side2 side3
+$ git rebase side3 main
+$ git push 
+_____________________________________
+ level remoteAdvanced2
+$ git checkout main
+$ git pull
+$ git merge side1
+$ git merge side2
+$ git merge side3
+$ git push
+_____________________________________
+ level remoteAdvanced3
+$ git checkout -b side o/main
+$ git commit
+$ git pull --rebase
+$ git push
+_____________________________________
+ level remoteAdvanced4 
+$ git push origin foo
+$ git push origin main 
+_____________________________________
+ level remoteAdvanced5 
+$ git push origin foo^:main
+$ git push origin foo:main
+$ git push origin main^:foo 
+_____________________________________
+ level remoteAdvanced6 
+$ git fetch origin main~1:foo
+$ git fetch origin foo:main
+$ git checkout foo
+$ git merge main 
+_____________________________________
+ level remoteAdvanced7
+$ git push origin :foo
+$ git fetch origin :bar 
+_____________________________________
+ level remoteAdvanced8 
+$ git pull origin bar:foo
+$ git pull origin main:side 
+ 
