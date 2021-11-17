@@ -1,0 +1,112 @@
+ level intro1
+$ git commit
+$ git commit
+_____________________________________________
+ level intro2
+$ git checkout -b bugFix
+_____________________________________________
+ level intro3
+$ git checkout -b bugFix
+$ git commit
+$ git checkout main
+$ git commit
+$ git merge bugFix
+_____________________________________________
+ level intro4
+$ git checkout -b bugFix
+$ git commit
+$ git checkout main
+$ git commit
+$ git checkout bugFix
+$ git rebase main 
+_____________________________________________
+ level rampup1
+$ git checkout C4
+_____________________________________________
+ level rampup2
+$ git checkout C3
+_____________________________________________
+ level rampup3
+$ git branch -f main C6
+$ git checkout HEAD^1
+$ git branch -f bugFix HEAD~1
+_____________________________________________
+ level rampup4
+$ git reset HEAD~1
+$ git checkout pushed
+$ git revert HEAD
+_____________________________________________
+ level move1
+$ git cherry-pick c3 c4 c7 
+_____________________________________________
+ level move2
+$ git rebase -i HEAD~4
+_____________________________________________
+ level mixed1
+$ git rebase -i HEAD~3
+$ git checkout main
+$ git merge bugFix 
+_____________________________________________
+ level mixed2
+$ git rebase -i HEAD~2
+$ git commit --amend
+$ git rebase -i HEAD~2
+$ git checkout main
+$ git merge caption
+_____________________________________________
+ level mixed3
+$ git checkout main
+$ git cherry-pick c2
+$ git commit --amend
+$ git cherry-pick c3 
+_____________________________________________
+ level mixed4
+$ git tag v0 c1
+$ git checkout c2
+$ git tag v1 
+_____________________________________________
+ level mixed5
+$ git describe
+v1_2_gC6
+$ git describe v1
+v1
+$ git describe c3
+v1
+$ git commit 
+_____________________________________________
+ level advanced1
+$ git checkout bugFix
+$ git rebase main
+$ git checkout C4
+$ git rebase bugFix
+$ git checkout C5
+$ git rebase c4'
+$ git checkout side
+$ git rebase c5'
+$ git checkout another
+$ git rebase side
+$ git checkout main
+$ git merge another 
+_____________________________________________
+ level advanced2
+$ git checkout HEAD^1^2^1
+$ git branch bugWork
+$ git checkout main
+_____________________________________________
+ level advanced3
+$ git checkout three
+$ git merge C2
+$ git checkout C1
+$ git cherry-pick C4
+$ git cherry-pick C3
+$ git cherry-pick C2
+$ git checkout one
+$ git merge C2'
+$ git checkout C1
+$ git cherry-pick C5
+$ git cherry-pick C4'
+$ git cherry-pick C3'
+$ git cherry-pick C2'
+$ git checkout two
+$ git merge c2'' 
+ 
